@@ -61,8 +61,8 @@ function copyBinary(fsPath) {
     if (plat === 'win') {
         fs.createReadStream(path.join(__dirname, "../build/proxy-win.exe")).pipe(fs.createWriteStream(path.join(fsPath, platBinary)))
     } else if (plat === 'macos') {
-        fs.copyFileSync(path.join(__dirname, "../build/proxy-macos"), path.join(fsPath, platBinary))
+        fs.createReadStream(path.join(__dirname, "../build/proxy-macos")).pipe(fs.createWriteStream(path.join(fsPath, platBinary)))
     } else if (plat === 'linux') {
-        fs.copyFileSync(path.join(__dirname, "../build/proxy-linux"), path.join(fsPath, platBinary))
+        fs.createReadStream(path.join(__dirname, "../build/proxy-linux")).pipe(fs.createWriteStream(path.join(fsPath, platBinary)))
     }
 }

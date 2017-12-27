@@ -10,7 +10,7 @@ const { exec } = require('pkg');
         version: require(__dirname + '/proxy/package.json').version
     }))
 
-    await exec([__dirname + '/patcher', '--debug', '--target', 'win', '--output', __dirname + '/build/patcher-win'])
+    await exec([__dirname + '/patcher', '--target', 'win', '--output', __dirname + '/build/patcher-win'])
     await exec([__dirname + '/patcher', '--target', 'linux', '--output', __dirname + '/build/patcher-linux'])
     await exec([__dirname + '/patcher', '--target', 'macos', '--output', __dirname + '/build/patcher-macos'])
 
