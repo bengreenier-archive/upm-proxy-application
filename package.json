@@ -1,0 +1,13 @@
+{
+  "name": "upm-proxy-application",
+  "version": "0.1.1",
+  "description": "a proxy upm application, to allow users to query insecure package services",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "author": "Ben Greenier",
+  "license": "MIT",
+  "devDependencies": {
+    "pkg": "^4.3.0-beta.5"
+  }
+}
